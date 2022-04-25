@@ -6,11 +6,13 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.moviereview.MovieApplication
 import com.example.moviereview.R
 
 class MoviesActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    val api get() = (application as MovieApplication).movieReviewApi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,4 +23,5 @@ class MoviesActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController)
     }
+
 }

@@ -10,13 +10,15 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.Exception
 
-class MoviesViewModel: ViewModel() {
+class MoviesViewModel(
+    private val movieReviewApi: MovieReviewApi
+): ViewModel() {
 
-    private var retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl(Constants.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-    private var movieReviewApi: MovieReviewApi  = retrofit.create(MovieReviewApi::class.java)
+//    private var retrofit: Retrofit = Retrofit.Builder()
+//        .baseUrl(Constants.BASE_URL)
+//        .addConverterFactory(GsonConverterFactory.create())
+//        .build()
+//    private var movieReviewApi: MovieReviewApi  = retrofit.create(MovieReviewApi::class.java)
 
     val listData = Pager(PagingConfig(pageSize = 1)) {
         MoviesPagingSource(movieReviewApi)
