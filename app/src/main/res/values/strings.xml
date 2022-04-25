@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movie Review</string>
+    <string name="app_icon">App icon</string>
+    <string name="movie_photo">Movie photo</string>
+    <string name="movie_name">Movie name</string>
+    <string name="movie_descr">Descriprion</string>
+</resources>
